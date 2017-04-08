@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trader_id: 1
+  start: 1
+  deliver_price: 1.5
+  deliver_time: 1
+  evalution: 1.5
+
+two:
+  trader_id: 1
+  start: 1
+  deliver_price: 1.5
+  deliver_time: 1
+  evalution: 1.5
