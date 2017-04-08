@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appraisal_id: 1
+  product_id: 1
+  content: MyText
+  judge: 1
+  status: false
+
+two:
+  appraisal_id: 1
+  product_id: 1
+  content: MyText
+  judge: 1
+  status: false

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  logo: MyString
+  is_brand: false
+  branch: MyString
+  description: MyText
+  deliver_id: 1
+
+two:
+  title: MyString
+  logo: MyString
+  is_brand: false
+  branch: MyString
+  description: MyText
+  deliver_id: 1
