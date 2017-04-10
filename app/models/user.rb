@@ -46,5 +46,7 @@ class User < ApplicationRecord
       return e
     end
   end
+  
+  
 
 end
