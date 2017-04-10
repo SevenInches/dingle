@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170409143625) do
+ActiveRecord::Schema.define(version: 20170410073552) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "name"
@@ -157,10 +157,13 @@ ActiveRecord::Schema.define(version: 20170409143625) do
     t.string   "nickname"
     t.string   "phone"
     t.string   "avatar"
-    t.string   "password"
-    t.float    "money",      limit: 24
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.float    "money",           limit: 24
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "password_digest"
+    t.string   "token"
+    t.integer  "source"
+    t.string   "phone_address"
   end
 
 end
