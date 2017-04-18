@@ -2,7 +2,6 @@ class User < ApplicationRecord
 
   VALID_PHONE_REGEX = /1(3[0-9]|4[57]|5[0-35-9]|7[01678]|8[0-9])\d{8}/
 
-  has_many :activities
   has_many :appraisals
   has_many :orders
 
@@ -13,15 +12,6 @@ class User < ApplicationRecord
   has_secure_token
 
   after_create :generate_token
-
-  def sex
-    case gender
-      when 1 then '男'
-      when 2 then '女'
-      else
-        '未知'
-    end
-  end
 
   def generate_token
     self.token
@@ -46,7 +36,14 @@ class User < ApplicationRecord
       return e
     end
   end
-  
-  
+
+  def sex
+    case gender
+      when 1 then '男'
+      when 2 then '女'
+      else
+        '未知'
+    end
+  end
 
 end
