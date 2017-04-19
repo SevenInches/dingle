@@ -5,7 +5,7 @@ class CreateAddresses < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :gender
       t.string :phonecall
-      t.integer :address
+      t.string :address
       t.integer :tag
 
       t.timestamps

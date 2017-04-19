@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       get  'users/show'                   => 'users#show'
       put 'users/update_avatar'           => 'users#update_avatar'
       put 'users/update'                  => 'users#update_profile'
+
+      resources :address
     end
   end
 end

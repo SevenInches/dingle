@@ -32,5 +32,4 @@ class Api::V1::UsersController < Api::V1::BaseController
     def get_user
       @user = current_user
     end
-  
 end

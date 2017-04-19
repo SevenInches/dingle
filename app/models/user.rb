@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_many :appraisals
   has_many :orders
+  has_many :addresses
 
   validates :phone, presence: true, uniqueness: true, format: {with: VALID_PHONE_REGEX}
 
