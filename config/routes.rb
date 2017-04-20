@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       post 'signup'                       => 'users#create'
+      post 'login'                        => 'users#login'
+      get  'logout'                       => 'users#logout'
       get  'users/show'                   => 'users#show'
       put 'users/update_avatar'           => 'users#update_avatar'
       put 'users/update'                  => 'users#update_profile'
