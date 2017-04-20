@@ -134,9 +134,7 @@ ActiveRecord::Schema.define(version: 20170418134542) do
 
   create_table "trader_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.integer  "trader_id"
-    t.integer  "start"
     t.float    "deliver_price", limit: 24
-    t.integer  "deliver_time"
     t.float    "evaluation",    limit: 24
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false

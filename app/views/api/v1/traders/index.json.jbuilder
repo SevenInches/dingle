@@ -6,8 +6,10 @@ json.data do
     json.logo trader.try(:logo) || ''
     json.is_brand trader.try(:is_brand) || false
     json.branch trader.try(:branch) || ''
-    json.scores trader.try(:scores) || 0.0
+    json.score trader.try(:trader_detail).try(:evaluation) || 0.0
     json.order_total trader.try(:order_total) || 0
+    json.deliver trader.try(:deliver).try(:name) || ''
+    json.deliver_price trader.try(:trader_detail).try(:deliver_price) || 0
 
   end
 end
