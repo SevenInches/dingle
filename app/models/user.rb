@@ -20,6 +20,11 @@ class User < ApplicationRecord
     self.get_phone_address
   end
 
+  def reset_token!
+    generate_token
+    self.save
+  end
+
   def get_phone_address
     begin
       key = '64f15892817c3f3019b05a31672f1e72'
@@ -36,6 +41,16 @@ class User < ApplicationRecord
     rescue Exception => e
       return e
     end
+  end
+
+  # source: {0: WeChat, 1: iOS, 2: Android, 3: web}
+  def self.sources
+    %w(WeChat IOS Android PC)
+  end
+
+  def source_word
+    sources = User.sources
+    sources[source]
   end
 
   def sex
