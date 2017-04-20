@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://gems.ruby-china.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -41,6 +41,8 @@ gem 'qiniu', '~> 6.8.1'
 gem 'has_secure_token'
 gem 'curb'
 gem 'bcrypt'
+
+gem 'swagger-docs'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
