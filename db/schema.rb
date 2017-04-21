@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418134542) do
+ActiveRecord::Schema.define(version: 20170420123900) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170418134542) do
     t.integer  "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "trader_id"
   end
 
   create_table "activity_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
@@ -34,7 +35,7 @@ ActiveRecord::Schema.define(version: 20170418134542) do
     t.string   "name"
     t.integer  "gender"
     t.string   "phonecall"
-    t.string  "address"
+    t.string   "address"
     t.integer  "tag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -134,7 +135,9 @@ ActiveRecord::Schema.define(version: 20170418134542) do
 
   create_table "trader_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.integer  "trader_id"
+    t.integer  "start"
     t.float    "deliver_price", limit: 24
+    t.integer  "deliver_time"
     t.float    "evaluation",    limit: 24
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
@@ -149,6 +152,9 @@ ActiveRecord::Schema.define(version: 20170418134542) do
     t.integer  "deliver_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "status"
+    t.time     "open_time"
+    t.time     "close_time"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|

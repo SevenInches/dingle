@@ -9,8 +9,6 @@ class Api::V1::TradersController < Api::V1::BaseController
     @traders = Trader.where(status: Trader::OPEN_STATUS).where("open_time > ? and close_time < ?", Time.now)
     @traders.paginate(:page => params[:page], :per_page => 20)
   end
-
-
-
+  
 
 end
